@@ -34,22 +34,38 @@
             </li>
         </ul><br><br><br>
 
-            <div class="">
-                <br><br><br><br><br>
-                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 800px; background-color: rgba(0, 0, 0, 0.541); opacity: 50%;">
-                    <div class="row g-4 " style="--bs-gutter-y:0;">
-                        
-                        <div class="col-md-8 " style="margin: auto; width: auto;">
-                            <div class="card-body ">
-                                <h5 class="card-title text-light">Card title</h5>
-                                <p class="card-text text-light">this is a wider card with supporting text below  as a natural lead</p>    
-                                <p class="card-text"><small class="text-muted">Last updated 3 min ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div><br><br><br><br><br><br><br><br><center><button class="btn btn-outline-primary text-light" style="width:20%; height: 60px; font-size: 28px;" onclick="window.location.href='file:///D:/Software/htdocs/phplogin/qpphome.html';">Onward</button></center><br><br><br><br><br><br><br>
+<h5 class="text-light text-center">
+        Please Enter the Following and Reach Out to US!
+        </h5><br>
 
+    <div class="border border-4 rounded-3" style="margin-left: 22%; margin-right: 22%; background-color: rgba(255, 255, 255, 0.932); padding: 1%;">
+        <form  action="helphandler.php" method="post">
+            <div class="mb-3">
+                <label for="inputname" class="form-label"><strong>First & Last Name</strong></label>
+                <input type="text" name="name" placeholder="Full Name" class="form-control" id="inputname" aria-describedby="nameHelp" required>
             </div>
+
+            <div class="mb-3">
+                <label for="inputemail" class="form-label"><strong>Email Address</strong></label>
+                <input type="email" name="mail" placeholder="Your e-mail" class="form-control" id="inputemail" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">Your email will never be shared with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="inputsubject" class="form-label"><strong>Subject</strong></label>
+                <input type="text" name="subject" placeholder="Subject" class="form-control" id="inputsubject" aria-describedby="subjectHelp" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="inputmessage" class="form-label"><strong>Message</strong></label>
+                <textarea name="message" placeholder="Message" class="form-control" id="inputmessage" aria-describedby="messageHelp" required></textarea>
+            </div>
+                
+            <div class="text-center">
+                <button class="btn btn-outline-primary rounded" type="submit" name ="submit"><strong>Submit Request</strong></button>
+            </div>
+        </form>
+    </div>
             
             <div class="row" id="footer" style="--bs-gutter-x:0;">
                 <div class="col">

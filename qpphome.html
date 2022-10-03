@@ -12,7 +12,28 @@
     <title>QP - Home</title>
     <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="home1.png" style="height:150px;" class=""></h1><br>
 </head>
-<body>
+
+<style>
+.glow {
+    font-size: 40px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    color:rgba(5, 4, 56, 0.986); 
+    animation: glow 2s ease-in-out infinite alternate; 
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8136d6, 0 0 40px #8136d6, 0 0 50px #8136d6, 0 0 60px #8136d6, 0 0 70px #8136d6;
+        } 
+        
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #bc88f8,  0 0 40px #bc88f8,  0 0 50px #bc88f8,  0 0 60px #bc88f8,  0 0 70px #bc88f8,  0 0 80px #bc88f8;
+        }
+    }
+</style>
+
+<body class="d-flex flex-column min-vh-100">
         
     <body style="background-image: linear-gradient(140deg, rgba(5, 4, 56, 0.986),  rgb(15, 14, 66), rgb(0, 0, 8));">
         <body style="margin-bottom: 2%;">
@@ -36,29 +57,29 @@
 
             <div class="">
                 <br><br><br><br><br>
-                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 800px; background-color: rgba(0, 0, 0, 0.541); opacity: 50%;">
-                    <div class="row g-4 " style="--bs-gutter-y:0;">
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 100%; background-color: rgba(0, 0, 0, 0.541);">
+                    <div class="row" style="--bs-gutter-y:0;">
                         
-                        <div class="col-md-8 " style="margin: auto; width: auto;">
+                        <div class="col" style="margin: auto; width: auto;">
+                            <img src="index.jpg" alt="Portrait" class="portrait" style="width: 80%; background-color:white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+                        </div>
+
+                        <div class="col" style="margin: auto; width: auto;">
                             <div class="card-body ">
-                                <h5 class="card-title text-light">Card title</h5>
-                                <p class="card-text text-light">this is a wider card with supporting text below  as a natural lead</p>    
-                                <p class="card-text"><small class="text-muted">Last updated 3 min ago</small></p>
+                                <h5 class="glow">Welcome</h5>
+                                <p class="card-title text-light">My name is Quinn and this is my website!</p>    
+                                <p class="card-text"><small class="text-muted">----</small></p>
                             </div>
                         </div>
                     </div>
-                </div><br><br><br><br><br><br><br><br><center><button class="btn btn-outline-primary text-light" style="width:20%; height: 60px; font-size: 28px;" onclick="window.location.href='file:///D:/Software/htdocs/phplogin/qpphome.html';">Onward</button></center><br><br><br><br><br><br><br>
-
+                </div>
             </div>
             
-            <div class="row" id="footer" style="--bs-gutter-x:0;">
+            <div class="mt-auto" id="footer" style="">
                 <div class="col">
                     <div class="footer">
                         <a href="mailto:babblatiu@gmail.com?" class="fa fa-google"></a>
-                        <a href="https://twitter.com/BabblC" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
-                        <a href="https://www.facebook.com/profile.php?id=100079188038384" class="fa fa-facebook"></a>
-                        <a href="https://www.youtube.com/channel/UClgP6BqwLecSBQqvxTwwAFA" class="fa fa-youtube"></a>
+                        
                     </div>
                 </div>
             </div>

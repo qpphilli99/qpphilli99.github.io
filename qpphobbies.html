@@ -12,7 +12,109 @@
     <title>QP - Hobbies</title>
     <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="hobbies.png" style="height:150px;" class=""></h1><br>
 </head>
-<body>
+
+    <style>
+        .slider {
+            width: 500px;
+            height: 600px;
+            border-radius: 25px;
+            background-color: none;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .slider2 {
+            width: 500px;
+            height: 620px;
+            border-radius: 25px;
+            background-color: none;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .image-container {
+            width: 1500px;
+            border-radius: 25px;
+            background-color: none;
+            height: 600px;
+            clear: both;
+            position: relative;
+            -webkit-transition: left 2s;
+            -moz-transition: left 2s;
+            -o-transition: left 2s;
+            transition: left 2s;
+        }
+
+        .image-container-2 {
+            width: 3000px;
+            border-radius: 25px;
+            background-color: none;
+            height: 620px;
+            clear: both;
+            position: relative;
+            -webkit-transition: left 2s;
+            -moz-transition: left 2s;
+            -o-transition: left 2s;
+            transition: left 2s;
+        }
+
+        .slide {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+
+        #slide-1:target ~ .image-container {
+            left: 0px;
+        }
+        #slide-2:target ~ .image-container {
+            left: -500px;
+        }
+        #slide-3:target ~ .image-container {
+            left: -1000px;
+        }
+        #slide-4:target ~ .image-container-2 {
+            left: 0px;
+        }
+        #slide-5:target ~ .image-container-2 {
+            left: -500px;
+        }
+        #slide-6:target ~ .image-container-2 {
+            left: -1000px;
+        }
+        #slide-7:target ~ .image-container-2 {
+            left: -1500px;
+        }
+        #slide-8:target ~ .image-container-2 {
+            left: -2000px;
+        }
+        #slide-9:target ~ .image-container-2 {
+            left: -2500px;
+        }
+
+
+        .buttons {
+            position: relative;
+            top: -20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            border-radius: 50px;
+            background-color: rgb(234, 107, 238);
+            border: 2px solid #000;
+        }
+    </style>
+
+<body class="d-flex flex-column min-vh-100">
         
     <body style="background-image: linear-gradient(140deg, rgba(5, 4, 56, 0.986),  rgb(15, 14, 66), rgb(0, 0, 8));">
     <body style="margin-bottom: 2%;">
@@ -36,29 +138,95 @@
 
             <div class="">
                 <br><br><br><br><br>
-                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 800px; background-color: rgba(0, 0, 0, 0.541); opacity: 50%;">
-                    <div class="row g-4 " style="--bs-gutter-y:0;">
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 950px; background-color: rgba(0, 0, 0, 0.541)">
+                    <div class="row" style="--bs-gutter-y:0;">
+                        <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">  
+                            <div class="col">
+                                <div class="slider">
+                                    <span id="slide-1"></span>
+                                    <span id="slide-2"></span>
+                                    <span id="slide-3"></span>
+                                    <div class="image-container">
+                                        <img src="moon.PNG" class="slide" width="500" height="600" title="A picture of the Moon shot off my IPhone 12 Pro, 2x zoom, attached to my Celestron 8se Telescope"/>
+                                        <img src="kirkwoodobservatory.PNG" class="slide" width="500" height="350" style="margin-top: 100px;"/>
+                                        <img src="milkyway.PNG" class="slide" width="500" height="600"/>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="#slide-1"></a>
+                                        <a href="#slide-2"></a>
+                                        <a href="#slide-3"></a>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
                         
-                        <div class="col-md-8 " style="margin: auto; width: auto;">
+                        <div class="col-md-8" style="margin: auto; width: auto;">
                             <div class="card-body ">
-                                <h5 class="card-title text-light">Card title</h5>
-                                <p class="card-text text-light">this is a wider card with supporting text below  as a natural lead</p>    
-                                <p class="card-text"><small class="text-muted">Last updated 3 min ago</small></p>
+                                <h5 class="card-title text-light">Astronomy</h5>
+                                <p class="card-text text-light">I've always enjoyed looking at stars in the clear night sky. In 2021 I decided to take an 
+                                                                introductory astronomy course. This course was extremely interesting and provoked me to begin 
+                                                                thinking about the universe in a whole different persepctive. I started attending the general 
+                                                                public Kirkwood Observatory Nights (pictured in slide #2) which are run by IU astronomy PHD students. 
+                                                                I will never forget the first time I saw Jupiter and Saturn through that telescope, 
+                                                                it was an indescribable experience. Since then I have been heavily invested in expanded my knowledge 
+                                                                of space via theoretical data analysis with python, and many nights out observing the cosmic wonderland. 
+                                </p>    
+                                <p class="card-text"><small class="text-muted">--------</small></p>
                             </div>
                         </div>
                     </div>
-                </div><br><br><br><br><br><br><br><br><center><button class="btn btn-outline-primary text-light" style="width:20%; height: 60px; font-size: 28px;" onclick="window.location.href='file:///D:/Software/htdocs/phplogin/qpphome.html';">Onward</button></center><br><br><br><br><br><br><br>
+                </div>
+
+                
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 850px; background-color: rgba(0, 0, 0, 0.541)">
+                    <div class="row" style="--bs-gutter-y:0;">
+                        <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">  
+                            <div class="col">
+                                <div class="slider2">
+                                    <span id="slide-4"></span>
+                                    <span id="slide-5"></span>
+                                    <span id="slide-6"></span>
+                                    <span id="slide-7"></span>
+                                    <span id="slide-8"></span>
+                                    <span id="slide-9"></span>
+                                    <div class="image-container-2">
+                                        <img src="sunflower.PNG" class="slide" width="500" height="620"/>
+                                        <img src="box1.PNG" class="slide" width="500" height="620"/>
+                                        <img src="box2.PNG" class="slide" width="500" height="400"/>
+                                        <img src="box3.PNG" class="slide" width="500" height="500"/>
+                                        <img src="petunia.PNG" class="slide" width="500" height="500"/>
+                                        <img src="corn.PNG" class="slide" width="500" height="600"/>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="#slide-4"></a>
+                                        <a href="#slide-5"></a>
+                                        <a href="#slide-6"></a>
+                                        <a href="#slide-7"></a>
+                                        <a href="#slide-8"></a>
+                                        <a href="#slide-9"></a>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                        
+                        <div class="col-md-8" style="margin: auto; width: auto;">
+                            <div class="card-body ">
+                                <h5 class="card-title text-light">Agriculture</h5>
+                                <p class="card-text text-light">this is a wider card with supporting text below  as a natural lead</p>    
+                                <p class="card-text"><small class="text-muted">--------</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
             
-            <div class="row" id="footer" style="--bs-gutter-x:0;">
+            <div class="mt-auto" id="footer" style="--bs-gutter-x:0;">
                 <div class="col">
                     <div class="footer">
-                        <a href="mailto:babblatiu@gmail.com?" class="fa fa-google"></a>
-                        <a href="https://twitter.com/BabblC" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
-                        <a href="https://www.facebook.com/profile.php?id=100079188038384" class="fa fa-facebook"></a>
-                        <a href="https://www.youtube.com/channel/UClgP6BqwLecSBQqvxTwwAFA" class="fa fa-youtube"></a>
+                        <a href="mailto:qpphilli99@gmail.com?" class="fa fa-google"></a>
+
                     </div>
                 </div>
             </div>

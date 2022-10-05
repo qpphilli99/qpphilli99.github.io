@@ -112,6 +112,42 @@
             background-color: rgb(234, 107, 238);
             border: 2px solid #000;
         }
+
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5 ease;
+            backface-visibility: hidden;
+        }
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .image-container:hover .image {
+            opacity: 0.3;
+        }
+        .image-container:hover .middle {
+            opacity: 1;
+        }
+        .text {
+            background-color: beige;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
     </style>
 
 <body class="d-flex flex-column min-vh-100">
@@ -147,9 +183,9 @@
                                     <span id="slide-2"></span>
                                     <span id="slide-3"></span>
                                     <div class="image-container">
-                                        <img src="moon.PNG" class="slide" width="500" height="600" title="A picture of the Moon shot off my IPhone 12 Pro, 2x zoom, attached to my Celestron 8se Telescope"/>
-                                        <img src="kirkwoodobservatory.PNG" class="slide" width="500" height="350" style="margin-top: 100px;"/>
-                                        <img src="milkyway.PNG" class="slide" width="500" height="600"/>
+                                        <img src="moon.PNG" class="slide" width="500" height="600" title="A picture of the Moon shot off my iPhone 12 Pro, attached to my Celestron 8se Telescope"/>
+                                        <img src="kirkwoodobservatory.PNG" class="slide" width="500" height="350" title="The Kirkwood Observatory telescope peers out of the dome at Jupiter" style="margin-top: 100px;"/>
+                                        <img src="milkyway.PNG" class="slide" width="500" title="A ten second exposure image of the Milky Way arm that our solar system resides within" height="600"/>
                                     </div>
                                     <div class="buttons">
                                         <a href="#slide-1"></a>
@@ -177,8 +213,54 @@
                     </div>
                 </div>
 
-                
-                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 850px; background-color: rgba(0, 0, 0, 0.541)">
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 950px; background-color: rgba(0, 0, 0, 0.541)">
+                    <div class="row" style="--bs-gutter-y:0;">
+                        <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">  
+                            <div class="col">
+                                <div class="slider2">
+                                    <span id="slide-10"></span>
+                                    <span id="slide-11"></span>
+                                    <span id="slide-12"></span>
+                                    <span id="slide-13"></span>
+                                    <span id="slide-14"></span>
+                                    <span id="slide-15"></span>
+                                    <div class="image-container-2">
+                                        <img src="sunflower.PNG" class="slide" width="500" title="A collective of mega 12 foot plus sunflowers that I planted this spring" height="620"/>
+                                        <img src="box1.PNG" class="slide" width="500" title="My garden box in May after the intial planting" height="620"/>
+                                        <img src="box2.PNG" class="slide" width="500" title="My garden box in late June. Things are starting to take off" height="400"/>
+                                        <img src="box3.PNG" class="slide" width="500" title="My garden box in mid July. Everything is bursting with greenery and new growth" height="500"/>
+                                        <img src="petunia.PNG" class="slide" width="500" title="A potted plant of petunias and ornamental grass that I put together" height="500"/>
+                                        <img src="corn.PNG" class="slide" width="500" title="Can you find me hidden in the corn?" height="600"/>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="#slide-10"></a>
+                                        <a href="#slide-11"></a>
+                                        <a href="#slide-12"></a>
+                                        <a href="#slide-13"></a>
+                                        <a href="#slide-14"></a>
+                                        <a href="#slide-15"></a>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                        
+                        <div class="col-md-8" style="margin: auto; width: auto;">
+                            <div class="card-body ">
+                                <h5 class="card-title text-light">Baking</h5>
+                                <p class="card-text text-light">I decided to take up gardening during the pandemic summer of 2020. 
+                                                                It proved to be a great outlet for stress relief at the time, and still is today. 
+                                                                I designed and then constructed a 4' x 8' wooden box complete with drainage and elemenatal protection 
+                                                                as shown in images 2-4. I planted a variey of things in the box including nasturtium, borage, 
+                                                                <a href="https://en.wikipedia.org/wiki/Asclepias_tuberosa">butterfly weed</a>, sweet corn, indian corn, purple pole beans, cucumbers, watermelon, tomatoes, onions, 
+                                                                sweet potatoes, a peanut plant, marigolds, bell peppers, and seven different varieties of hot peppers.</p>    
+                                <p class="card-text"><small class="text-muted">--------</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 950px; background-color: rgba(0, 0, 0, 0.541)">
                     <div class="row" style="--bs-gutter-y:0;">
                         <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">  
                             <div class="col">
@@ -190,12 +272,12 @@
                                     <span id="slide-8"></span>
                                     <span id="slide-9"></span>
                                     <div class="image-container-2">
-                                        <img src="sunflower.PNG" class="slide" width="500" height="620"/>
-                                        <img src="box1.PNG" class="slide" width="500" height="620"/>
-                                        <img src="box2.PNG" class="slide" width="500" height="400"/>
-                                        <img src="box3.PNG" class="slide" width="500" height="500"/>
-                                        <img src="petunia.PNG" class="slide" width="500" height="500"/>
-                                        <img src="corn.PNG" class="slide" width="500" height="600"/>
+                                        <img src="sunflower.PNG" class="slide" width="500" title="A collective of mega 12 foot plus sunflowers that I planted this spring" height="620"/>
+                                        <img src="box1.PNG" class="slide" width="500" title="My garden box in May after the intial planting" height="620"/>
+                                        <img src="box2.PNG" class="slide" width="500" title="My garden box in late June. Things are starting to take off" height="400"/>
+                                        <img src="box3.PNG" class="slide" width="500" title="My garden box in mid July. Everything is bursting with greenery and new growth" height="500"/>
+                                        <img src="petunia.PNG" class="slide" width="500" title="A potted plant of petunias and ornamental grass that I put together" height="500"/>
+                                        <img src="corn.PNG" class="slide" width="500" title="Can you find me hidden in the corn?" height="600"/>
                                     </div>
                                     <div class="buttons">
                                         <a href="#slide-4"></a>
@@ -211,8 +293,13 @@
                         
                         <div class="col-md-8" style="margin: auto; width: auto;">
                             <div class="card-body ">
-                                <h5 class="card-title text-light">Agriculture</h5>
-                                <p class="card-text text-light">this is a wider card with supporting text below  as a natural lead</p>    
+                                <h5 class="card-title text-light">Gardening</h5>
+                                <p class="card-text text-light">I decided to take up gardening during the pandemic summer of 2020. 
+                                                                It proved to be a great outlet for stress relief at the time, and still is today. 
+                                                                I designed and then constructed a 4' x 8' wooden box complete with drainage and elemenatal protection 
+                                                                as shown in images 2-4. I planted a variey of things in the box including nasturtium, borage, 
+                                                                swamp milkweed, sweet corn, indian corn, purple pole beans, cucumbers, watermelon, tomatoes, onions, 
+                                                                sweet potatoes, a peanut plant, marigolds, bell peppers, and seven different varieties of hot peppers.</p>    
                                 <p class="card-text"><small class="text-muted">--------</small></p>
                             </div>
                         </div>
@@ -233,3 +320,10 @@
  
 </body>
 </html>
+
+<!--<div class="image-container">
+                <img src="sunflower.PNG" class="slide" width="500" height="620"/>
+                <div class="middle">
+                    <div class="text">adfadffd</div>
+                </div>
+                </div>-->

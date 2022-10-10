@@ -13,8 +13,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <title>Quinns Quorum</title>
 </head>
+   
+<style>
+    .glow {
+        font-size: 40px; 
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: left;
+        color:rgba(5, 4, 56, 0.986); 
+        animation: glow 2s ease-in-out infinite alternate; 
+    }
     
-<body class="bg-dark " style="background-image: linear-gradient(140deg, rgba(16, 12, 231, 0.308),  rgba(16, 12, 231, 0.144), rgb(15, 12, 231, 0));">
+    @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8136d6, 0 0 40px #8136d6, 0 0 50px #8136d6, 0 0 60px #8136d6, 0 0 70px #8136d6;
+            } 
+            
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #bc88f8,  0 0 40px #bc88f8,  0 0 50px #bc88f8,  0 0 60px #bc88f8,  0 0 70px #bc88f8,  0 0 80px #bc88f8;
+            }
+        }
+</style>
+
+<body class="bg-dark d-flex flex-column min-vh-100 " style="background-image: linear-gradient(140deg, rgba(16, 12, 231, 0.308),  rgba(16, 12, 231, 0.144), rgb(15, 12, 231, 0));">
 
     <div class="container-fluid">
         <div class="row " id="header">
@@ -34,21 +54,21 @@
                 <div class="word w12">स्वागत है।</div>
             </div>
           </div>
-        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="card mb-3 rounded" style="margin: auto; max-width: 1100px; background-color: rgba(0, 0, 0, 0.541);">
-            <div class="row g-4 ">
-                <div class="col-md-4 ">
-                    <img src="index.jpg" style="width:490px;" class="rounded-circle">
-                </div>
-                <div class="col-md-8 " style="margin: auto; width: auto;">
-                    <div class="card-body ">
-                        <h5 class="card-title text-light">Card title</h5>
-                        <p class="card-text text-light">this is a wider card with supporting text below  as a natural lead</p>    
-                        <p class="card-text"><small class="text-muted">Last updated 3 min ago</small></p>
-                    </div>
-                </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+            
+    </div>
+     
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-outline-primary text-light" 
+                        style="width:20%; height: 60px; font-size: 28px;" 
+                        onclick="window.location.href='file:///D:/Software/htdocs/phplogin/qpphome.html';">Onward
+                </button>
             </div>
-        </div><br><br><br><br><br><br><br><br><center><button class="btn btn-outline-primary text-light" style="width:20%; height: 60px; font-size: 28px;" onclick="window.location.href='file:///D:/Software/htdocs/phplogin/qpphome.html';">Onward</button></center><br><br><br><br><br><br><br>
+        </div>
+    </div>
 
 
         <!--center><div class="col">
@@ -61,18 +81,15 @@
                     <br><br><br><br>
                     
                 </center></div> -->
-    </div>
     
-    <div class="row" id="footer">
-        <div class="col">
-            <div class="footer">
-                <a href="mailto:babblatiu@gmail.com?" class="fa fa-google"></a>
-                <a href="https://twitter.com/BabblC" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="https://www.facebook.com/profile.php?id=100079188038384" class="fa fa-facebook"></a>
-                <a href="https://www.youtube.com/channel/UClgP6BqwLecSBQqvxTwwAFA" class="fa fa-youtube"></a>
-            </div>
-        </div>
-    </div>
+    
+                <div class="mt-auto" id="footer" style="">
+                    <div class="col">
+                        <div class="footer">
+                            <a href="mailto:qpphilli99@gmail.com?" class="fa fa-google"></a>
+                            
+                        </div>
+                    </div>
+                </div>
 </body>
 </html>

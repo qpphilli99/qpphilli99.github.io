@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>-->
     <link rel="icon" href="Untitled-1.png" type="image/png">
     <title>QP - Hobbies</title>
     <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="hobbies.png" style="height:150px;" class=""></h1><br>
@@ -15,8 +15,8 @@
 
     <style>
         .slider {
-            width: 500px;
-            height: 600px;
+            width: 100%;
+            height: auto;
             border-radius: 25px;
             background-color: none;
             margin-left: auto;
@@ -38,16 +38,16 @@
         }
 
         .image-container {
-            width: 1500px;
-            border-radius: 25px;
-            background-color: none;
-            height: 600px;
-            clear: both;
-            position: relative;
-            -webkit-transition: left 2s;
-            -moz-transition: left 2s;
-            -o-transition: left 2s;
-            transition: left 2s;
+                width: 1500px;
+                border-radius: 25px;
+                background-color: none;
+                height: 600px;
+                clear: both;
+                position: relative;
+                -webkit-transition: left 2s;
+                -moz-transition: left 2s;
+                -o-transition: left 2s;
+                transition: left 2s;
         }
 
         .image-container-2 {
@@ -148,6 +148,54 @@
             font-size: 16px;
             padding: 16px 32px;
         }
+
+        @media only screen and (min-width: 200px) {
+            .slider {
+                
+                  
+            }
+        }
+            
+    .sliderq {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    .slides {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    .slides::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    .slides::-webkit-scrollbar-thumb {
+        background-color: aquamarine;
+        border-radius: 10px;
+    }
+    .slides::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .slides > div {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 100%;
+        height: auto;
+        margin-right: 50px;
+        border-radius: 10px;
+        background: #000;
+        transform-origin: center center;
+        transform: scale(1);
+        transition: transform 0.5s;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+    }
     </style>
 
 <body class="d-flex flex-column min-vh-100">
@@ -172,30 +220,33 @@
             </li>
         </ul><br><br><br>
 
+        
+
+
             <div class="">
                 <br><br><br><br><br>
-                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 950px; background-color: rgba(0, 0, 0, 0.541)">
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: auto; background-color: rgba(0, 0, 0, 0.541)">
                     <div class="row" style="--bs-gutter-y:0;">
                         <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">  
-                            <div class="col">
-                                <div class="slider">
-                                    <span id="slide-1"></span>
-                                    <span id="slide-2"></span>
-                                    <span id="slide-3"></span>
-                                    <div class="image-container">
-                                        <img src="moon.PNG" class="slide" width="500" height="600" title="A picture of the Moon shot off my iPhone 12 Pro, attached to my Celestron 8se Telescope"/>
-                                        <img src="kirkwoodobservatory.PNG" class="slide" width="500" height="350" title="The Kirkwood Observatory telescope peers out of the dome at Jupiter" style="margin-top: 100px;"/>
-                                        <img src="milkyway.PNG" class="slide" width="500" title="A ten second exposure image of the Milky Way arm that our solar system resides within" height="600"/>
-                                    </div>
-                                    <div class="buttons">
-                                        <a href="#slide-1"></a>
-                                        <a href="#slide-2"></a>
-                                        <a href="#slide-3"></a>
+                            <div class="col-md-6 mx-auto">
+                                <div class="sliderq">
+                                    <a href="#s1">1</a>
+                                    <a href="#s2">2</a>
+                                    <a href="#s3">3</a>
+                                    <a href="#s4">4</a>
+                                    <a href="#s5">5</a>
+                                    <div class="slides">
+                                        <div id="s1"><img src="moon.PNG" style="width: 100%; height:auto;" title="A picture of the Moon shot off my iPhone 12 Pro, attached to my Celestron 8se Telescope"/></div>
+                                        <div id="s2"><img src="kirkwoodobservatory.PNG" style="width: 100%; height:auto;" title="The Kirkwood Observatory telescope peers out of the dome at Jupiter"/></div>
+                                        <div id="s3"><img src="milkyway.PNG" style="width: 100%; height:auto;" title="A ten second exposure image of the Milky Way arm that our solar system resides within"/></div>
+                                        <div id="s4">4</div>
+                                        <div id="s5">5</div>
                                     </div>
                                 </div>
+                               
                             </div>                          
                         </div>
-                        
+
                         <div class="col-md-8" style="margin: auto; width: auto;">
                             <div class="card-body ">
                                 <h5 class="card-title text-light">Astronomy</h5>
@@ -213,40 +264,32 @@
                     </div>
                 </div>
 
-                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 950px; background-color: rgba(0, 0, 0, 0.541)">
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: auto; background-color: rgba(0, 0, 0, 0.541)">
                     <div class="row" style="--bs-gutter-y:0;">
-                        <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">  
-                            <div class="col">
-                                <div class="slider2">
-                                    <span id="slide-10"></span>
-                                    <span id="slide-11"></span>
-                                    <span id="slide-12"></span>
-                                    <span id="slide-13"></span>
-                                    <span id="slide-14"></span>
-                                    <span id="slide-15"></span>
-                                    <div class="image-container-2">
-                                        <img src="sunflower.PNG" class="slide" width="500" title="A collective of mega 12 foot plus sunflowers that I planted this spring" height="620"/>
-                                        <img src="box1.PNG" class="slide" width="500" title="My garden box in May after the intial planting" height="620"/>
-                                        <img src="box2.PNG" class="slide" width="500" title="My garden box in late June. Things are starting to take off" height="400"/>
-                                        <img src="box3.PNG" class="slide" width="500" title="My garden box in mid July. Everything is bursting with greenery and new growth" height="500"/>
-                                        <img src="petunia.PNG" class="slide" width="500" title="A potted plant of petunias and ornamental grass that I put together" height="500"/>
-                                        <img src="corn.PNG" class="slide" width="500" title="Can you find me hidden in the corn?" height="600"/>
-                                    </div>
-                                    <div class="buttons">
-                                        <a href="#slide-10"></a>
-                                        <a href="#slide-11"></a>
-                                        <a href="#slide-12"></a>
-                                        <a href="#slide-13"></a>
-                                        <a href="#slide-14"></a>
-                                        <a href="#slide-15"></a>
+                        <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">
+                            <div class="col-md-6 mx-auto">
+                                <div class="sliderq">
+                                    <a href="#s6">1</a>
+                                    <a href="#s7">2</a>
+                                    <a href="#s8">3</a>
+                                    <a href="#s9">4</a>
+                                    <a href="#s10">5</a>
+                                    <a href="#s11">6</a>
+                                    <div class="slides">
+                                        <div id="s6"><img src="sunflower.PNG" style="width: 100%; height:auto;" title="A collective of mega 12 foot plus sunflowers that I planted this spring"></div>
+                                        <div id="s7"><img src="box1.PNG" style="width: 100%; height:auto;" title="My garden box in May after the intial planting" style="margin-top: 100px;"/></div>
+                                        <div id="s8"><img src="box2.PNG" style="width: 100%; height:auto;" title="A ten second exposure image of the Milky Way arm that our solar system resides within"/></div>
+                                        <div id="s9"><img src="box3.PNG" style="width: 100%; height:auto;" title="My garden box in mid July. Everything is bursting with greenery and new growth" /></div>
+                                        <div id="s10"><img src="petunia.PNG" style="width: 100%; height:auto;" title="A potted plant of petunias and ornamental grass that I put together"/></div>
+                                        <div id="s11"><img src="corn.PNG" style="width: 100%; height:auto;" title="Can you find me hidden in the corn?"/></div>
                                     </div>
                                 </div>
-                            </div>                          
+                            </div>                                  
                         </div>
                         
                         <div class="col-md-8" style="margin: auto; width: auto;">
                             <div class="card-body ">
-                                <h5 class="card-title text-light">Baking</h5>
+                                <h5 class="card-title text-light">Gardening</h5>
                                 <p class="card-text text-light">I decided to take up gardening during the pandemic summer of 2020. 
                                                                 It proved to be a great outlet for stress relief at the time, and still is today. 
                                                                 I designed and then constructed a 4' x 8' wooden box complete with drainage and elemenatal protection 
@@ -260,7 +303,7 @@
                 </div>
 
 
-                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: 950px; background-color: rgba(0, 0, 0, 0.541)">
+                <div class="card mb-3 rounded" style="margin: auto; width: 80%; height: auto; background-color: rgba(0, 0, 0, 0.541)">
                     <div class="row" style="--bs-gutter-y:0;">
                         <div class="row" style="--bs-gutter-y:0; margin-top: 4%; margin-bottom: 4%;">  
                             <div class="col">
@@ -326,4 +369,46 @@
                 <div class="middle">
                     <div class="text">adfadffd</div>
                 </div>
-                </div>-->
+                </div>
+            
+            <div class="accordion" id="">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button">
+                Accordion item 1
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-label="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>first item info</strong>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button">
+                Accordion item 1
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-label="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>first item info</strong>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button">
+                Accordion item 1
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-label="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>first item info</strong>
+            </div>
+        </div>
+    </div>
+
+</div>
+            
+            -->

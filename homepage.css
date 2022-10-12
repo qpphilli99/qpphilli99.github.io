@@ -1,4 +1,11 @@
 
+html, body {
+    overflow-x: hidden;
+}
+body {
+    position: relative;
+}
+
 /* Style header */
 #header {
     background-color: #000;

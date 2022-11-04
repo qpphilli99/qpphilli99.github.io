@@ -14,7 +14,7 @@
 <title>Quinns Quorum</title>
 </head>
     
-<body class="bg-dark " style="background-image: radial-gradient(circle closest-side at 50% 59%, #000, rebeccapurple, #000); overflow-x: hidden; overflow-y: auto; background-repeat: no-repeat;">
+<body class="bg-dark d-flex flex-column min-vh-100" style="background-image: radial-gradient(circle closest-side at 50% 59%, #000, rebeccapurple, #000); overflow-x: hidden; overflow-y: auto; background-repeat: no-repeat;">
 
     <div class="container-fluid" style="padding-right: 0; padding-left: 0;">
         <div class="row " id="header">
@@ -45,13 +45,16 @@
     <div class="mt-auto" id="footer" style="--bs-gutter-x: 0; margin-top: 4%;">
         <div class="col">
             <div class="footer">
-                <a href="mailto:qpphilli99@gmail.com?" class="fab fa-google" style="padding: 20px; text-decoration: none; text-align: center; font-size: inherit; border-radius: 50%;"></a>
+                <a href="mailto:qpphilli99@gmail.com?" class="fa fa-google"></a>
                 <button class="btn btn-sm btn-info" onclick="getLocation()">Click Me!</button>
                 <p id="output" style="color:aliceblue;"></p>
             </div>
         </div>
     </div>
     <script>
+        //attempting to aquire user location
+        const x = document.getElementById("output");
+
         function getLocation() {
             if(navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, showError);

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="homepage.css">
+    <link rel="stylesheet" href="homepage.css">
+    
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="Untitled-1.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <title>QP - Home</title>
     <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="home1.png" style="height:150px;" class=""></h1><br>
@@ -19,29 +20,31 @@
     body {
         font-family: 'Montserrat', sans-serif;
     }
-    .weather {
+    .weather1 {
         background-image: linear-gradient(to right top, hsl(210, 100%, 50%, 0.2), hsl(210, 100%, 50%, 0.4), hsl(210, 100%, 50%, 0.7));
         padding: 3% 4% 3% 4%;
         border-radius: 25px;
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 
     }
-    .weather:hover, .sunny:hover, .cloudy:hover, .rainy:hover {
+    .weather1:hover, .sunny1:hover, .cloudy1:hover, .rainy1:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.59);
         transform: scale(1.08);
+        backface-visibility: none;
     }
-    .sunny {
+    .sunny1 {
         background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
         padding: 3% 4% 3% 4%;
         border-radius: 25px;
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     }
-    .cloudy {
+    .cloudy1 {
         background-image: linear-gradient(to right top, #63747c, #71858e, #7f96a0, #8da8b2, #9bbac5);
         padding: 3% 4% 3% 4%;
         border-radius: 25px;
+        transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     }
-    .rainy {
+    .rainy1 {
         background-image: linear-gradient(to right top, #637c7b, #718e8c, #7ea09e, #8db2b0, #9bc5c3);
         padding: 3% 4% 3% 4%;
         border-radius: 25px;

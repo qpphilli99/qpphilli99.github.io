@@ -174,10 +174,10 @@
         //weather call
         function weatherBallon( cityID ) {
             var key = '2e20ed8413e872de26ceee4534442210';
-            fetch('http://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)
+            fetch('http://api.openweathermap.org/data/2.5/weather?id=4920423&appid=2e20ed8413e872de26ceee4534442210')
              .then(function(resp) {return resp.json() }) //convert data to json
              .then(function(data) {
-                console.log(data);
+                //console.log(data);
                 drawWeather(data);
              })
              .catch(function() {

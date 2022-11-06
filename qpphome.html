@@ -20,31 +20,31 @@
     body {
         font-family: 'Montserrat', sans-serif;
     }
-    .weather1 {
+    .weather {
         background-image: linear-gradient(to right top, hsl(210, 100%, 50%, 0.2), hsl(210, 100%, 50%, 0.4), hsl(210, 100%, 50%, 0.7));
         padding: 3% 4% 3% 4%;
         border-radius: 25px;
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 
     }
-    .weather1:hover, .sunny1:hover, .cloudy1:hover, .rainy1:hover {
+    .weather:hover, .sunny:hover, .cloudy:hover, .rainy:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.59);
         transform: scale(1.08);
         backface-visibility: none;
     }
-    .sunny1 {
+    .sunny {
         background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
         padding: 3% 4% 3% 4%;
         border-radius: 25px;
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     }
-    .cloudy1 {
+    .cloudy {
         background-image: linear-gradient(to right top, #63747c, #71858e, #7f96a0, #8da8b2, #9bbac5);
         padding: 3% 4% 3% 4%;
         border-radius: 25px;
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     }
-    .rainy1 {
+    .rainy {
         background-image: linear-gradient(to right top, #637c7b, #718e8c, #7ea09e, #8db2b0, #9bc5c3);
         padding: 3% 4% 3% 4%;
         border-radius: 25px;
@@ -144,11 +144,13 @@
             <button class="btn mx-auto mt-4" onclick="showLegend()" style="color:#8da8b2; font-style: italic; border: 1px solid #000;">Legend</button>
 
             <!--https://www.cleardarksky.com/c/FtWayneINkey.html-->
-            <div id="cleardarksky" class="mt-2 mx-auto" style="">
-                <img src="https://www.cleardarksky.com/c/FtWayneINcsk.gif?c=475244">
-                <img id ="legend" src="skylegend.PNG" style="display: none;">
-            </div>        
-    
+            <div class="container mt-2" style="max-width: 50%; overflow-x: scroll; background-color: #000; border-radius: 5px;">
+                <div id="cleardarksky" class=" mx-auto" style="">
+                    <img src="https://www.cleardarksky.com/c/FtWayneINcsk.gif?c=475244">
+                    <img id ="legend" src="skylegend.PNG" style="display: none;">
+                </div>        
+            </div>
+            
             <div style="height: 100px;"></div>
 
             <div class="mt-auto" id="footer">
@@ -174,10 +176,11 @@
         //weather call
         function weatherBallon( cityID ) {
             var key = '2e20ed8413e872de26ceee4534442210';
-            fetch('http://api.openweathermap.org/data/2.5/weather?id=4920423&appid=2e20ed8413e872de26ceee4534442210')
+            const proxy = 'https://cors-anywhere.herokuapp.com/';
+            fetch(proxy + 'http://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)
              .then(function(resp) {return resp.json() }) //convert data to json
              .then(function(data) {
-                //console.log(data);
+                console.log(data);
                 drawWeather(data);
              })
              .catch(function() {

@@ -59,7 +59,6 @@
         border-radius: 25px;
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
         color: rgb(255, 255, 255);
-        height: 100%;
         text-align: center;
     }
 
@@ -103,6 +102,48 @@
         width: 100%;
         height: 100%;
     }
+
+    #skills {
+        display: inline-block; 
+        margin-left: 12%; 
+        width: 330px; 
+        background-color: white; 
+        border-radius: 10px;
+    }
+    .ht2:hover {
+        background: linear-gradient(to right, greenyellow 46%, transparent 0);
+        background-size: 200% 100%;
+        background-position: right;
+        animation: skillmeter 4s 1s forwards;
+    }
+    .cs2:hover {
+        background: linear-gradient(to right, greenyellow 44%, transparent 0);
+        background-size: 200% 100%;
+        background-position: right;
+        animation: skillmeter 4s 1s forwards;
+    }
+    .js2:hover {
+        background: linear-gradient(to right, greenyellow 30%, transparent 0);
+        background-size: 200% 100%;
+        background-position: right;
+        animation: skillmeter 4s 1s forwards;
+    }
+    .ph2:hover {
+        background: linear-gradient(to right, greenyellow 50%, transparent 0);
+        background-size: 200% 100%;
+        background-position: right;
+        animation: skillmeter 4s 1s forwards;
+    }
+    .gi2:hover {
+        background: linear-gradient(to right, greenyellow 40%, transparent 0);
+        background-size: 200% 100%;
+        background-position: right;
+        animation: skillmeter 4s 1s forwards;
+    }
+    @keyframes skillmeter {
+        100% {background-position: left; }
+        
+    }
 </style>
 
 <body class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(140deg, rgba(5, 4, 56, 0.986),  rgb(15, 14, 66), rgb(0, 0, 8));">
@@ -129,25 +170,41 @@
                 </div>
             </div>
 
-            <div class="container" style="margin-bottom: 4%;">
-                <div class="row mx-auto"  style="margin: 2%;">
-                    <div class="col">
-                        <div class="card-mb-2 text-light">
-                            <div class="row no-gutters">
-                                <div class="col">
-                                    <div class="card-body" style="margin-top: 12%;">
-                                        <p class="card-title text-light text-center">My name is Quinn and this is my website!</p>    
-                                        <p class="card-text text-center"><small class="text-muted">----</small></p>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container mt-4 mx-auto" style="margin-bottom: 4%;">
+                <h1 class="display-6" style="color: #ffff;">About Me: <hr></h1>
+                <div class="row"  style="margin: 2%;">
+                    <div class="col-md-6 col-sm-4" style="color: #ffff;">
+                        <div class="mt-2">Favorite color   : <span style="color: green;"><strong>Green</strong></span></div>
+                        <div class="mt-2">Favorite food    : <span><strong>Pizza</strong></span></div>
+                        <div class="mt-2">Favorite animal  : <span><strong>Penguin</strong></span></div>
+                        <div class="mt-2">Favorite place   : <span><strong>Anyplace in nature</strong></span></div>
+                        <div class="mt-2">Favorite book    : <span><strong>Garden of Eden - Carl Sagan</strong></span></div>
+                        <div class="mt-2">Favorite TV show : <span><strong>The Simpsons</strong></span></div>
+                        <div class="mt-2">Favorite movie   : <span><strong>Dr. Strange</strong></span></div>
+
+                    </div>
+                    <!--<div class="col-md-2 col-sm-2" style="color: #ffff;">
+                        <div class="mt-2"><strong>Coding Skills</strong></div>
+                        <div class="mt-2">HTML</div>
+                        <div class="mt-2">CSS</div>
+                        <div class="mt-2">Javascript</div>
+                        <div class="mt-2">PHP</div>
+                        <div class="mt-2">Git</div>
+                    </div>-->
+                    <div class="col-md-6 col-sm-4" style="font-family:'Courier New', Courier, monospace;">
+                        <div class="mt-3 mb-2" style="color: rgb(13, 235, 31);"><strong>Coding Skills</strong></div>
+                        <span id="skills" class="ht2">&nbsp;HTML</span>
+                        <span id="skills" class="cs2 mt-2">&nbsp;CSS</span>
+                        <span id="skills" class="js2 mt-2">&nbsp;JavaScript</span>
+                        <span id="skills" class="ph2 mt-2">&nbsp;PHP</span>
+                        <span id="skills" class="gi2 mt-2">&nbsp;Git</span>
+                        
                     </div>
                 </div>
+                <hr style="color: #ffff;">
             </div>
 
-            <div class="row cols-2 justify-content-center">
+            <div class="row row-cols-3 row-cols-sm-4 row-cols-md-4 row-cols-lg-6 row-cols-xl-8 justify-content-center">
                 <div class="col-md-2">
                     <div id="weather" class="mx-auto text-light text-center">
                         <div id="description"></div>
@@ -157,11 +214,11 @@
                     </div>   
                 </div>
                 <div class="col-md-2">
-                    <div class="aqi mx-auto text-center" style="">
-                        <div>good</div>
+                    <div class="aqi mx-auto text-center">
+                        <div id="aqilevel"></div>
                         <i class="far fa-grin-beam" style=" font-size: 22px; margin-top: 8px; margin-bottom: 12px; color: rgb(red, green, blue);"></i>
                         <div id="aqi" class="mt-auto"></div>
-                        <div><h5>AQI:</h5></div>
+                        <div><h5>AQI</h5></div>
                     </div>
                 </div>       
             </div>
@@ -274,37 +331,41 @@
             
             if (mainaqi.aqi = 1) {
                 document.getElementById('aqi').innerHTML = '0 - 50';
+                document.getElementById('aqilevel').innerHTML = 'good';
             } else if (main.aqi = 2) {
                 document.getElementById('aqi').innerHTML = '51 - 100';
+                document.getElementById('aqilevel').innerHTML = 'moderate';
+                document.getElementById('aqi').style.backgroundImage = 'linear-gradient(to right top, hsl(58, 100%, 50%, 0.2), hsl(58, 100%, 50%, 0.4), hsl(58, 100%, 50%, 0.7))';
             } else if (main.aqi = 3) {
                 document.getElementById('aqi').innerHTML = '101 - 150';
+                document.getElementById('aqilevel').innerHTML = 'unhealthy for sensitive groups';
+                document.getElementById('aqi').style.backgroundImage = 'linear-gradient(to right top, hsl(39, 100%, 50%, 0.2), hsl(39, 100%, 50%, 0.4), hsl(39, 100%, 50%, 0.7))';
             } else if (main.aqi = 4) {
                 document.getElementById('aqi').innerHTML = '151 - 200';
+                document.getElementById('aqilevel').innerHTML = 'unhealthy';
+                document.getElementById('aqi').style.backgroundImage = 'linear-gradient(to right top, hsl(9, 100%, 50%, 0.2), hsl(9, 100%, 50%, 0.4), hsl(9, 100%, 50%, 0.7))';
             } else if (main.aqi = 5) {
                 document.getElementById('aqi').innerHTML = '201 - 300';
+                document.getElementById('aqilevel').innerHTML = 'very unhealthy';
+                document.getElementById('aqi').style.backgroundImage = 'linear-gradient(to right top, hsl(336, 100%, 50%, 0.2), hsl(336, 100%, 50%, 0.4), hsl(336, 100%, 50%, 0.7))';
             } else if (main.aqi = 6) {
                 document.getElementById('aqi').innerHTML = '301 - 500';
+                document.getElementById('aqilevel').innerHTML = 'hazardous';
+                document.getElementById('aqi').style.backgroundImage = 'linear-gradient(to right top, hsl(356, 100%, 50%, 0.2), hsl(356, 100%, 50%, 0.4), hsl(356, 100%, 50%, 0.7))';
             }
         }
-        /*
-            }
-            
-            document.getElementById('description').innerHTML = d.weather[0].description;
-            document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
-            document.getElementById('location').innerHTML = d.name;
-            document.getElementById('icon').src = 'http://openweathermap.org/img/w/'+d.weather[0].icon+'.png';
-            //document.getElementById('weather').className += ' cloudy';
-            
-            if (description.indexOf("rain") > 0 ) {
-                document.getElementById('weather').className += ' rainy';
-            } else if (description.indexOf("cloud") > 0 ) {
-                document.getElementById('weather').className += ' cloudy';
-            } else if (description.indexOf('sunny') > 0 ) {
-                document.getElementById('weather').className += ' sunny';
-            } else {
-                document.getElementById('weather').className += ' weather';
-            }
-        }*/
+
+        //nasa apod api
+        var nasakey = 'Jyaf4VejwvJey1lbwomVcx3GVSaFAR808YanbgDL';
+
+        fetch('https://api.nasa.gov/planetary/apod?api_key=Jyaf4VejwvJey1lbwomVcx3GVSaFAR808YanbgDL')
+         .then(response => {
+            return response.json() 
+         })
+         .then(data => {
+            console.log(data);
+            //drawAP(data);
+         });
 
         //parallax
         let last_known_scroll_position = 0;

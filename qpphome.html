@@ -8,10 +8,11 @@
     
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <link rel="icon" href="Untitled-1.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dc9b3cdfa0.js" crossorigin="anonymous"></script>
     <title>QP - Home</title>
     <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="home1.png" style="height:150px;" class=""></h1><br>
 </head>
@@ -27,7 +28,7 @@
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 
     }
-    .weather:hover, .sunny:hover, .cloudy:hover, .rainy:hover {
+    .weather:hover, .sunny:hover, .cloudy:hover, .rainy:hover, .aqi:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.59);
         transform: scale(1.08);
         backface-visibility: none;
@@ -50,6 +51,18 @@
         border-radius: 25px;
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     }
+
+    /* AQI */
+    .aqi {
+        background-image: linear-gradient(to right top, hsl(116, 100%, 50%, 0.2), hsl(116, 100%, 50%, 0.4), hsl(116, 100%, 50%, 0.7));
+        padding: 3% 4% 3% 4%;
+        border-radius: 25px;
+        transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+        color: rgb(255, 255, 255);
+        height: 100%;
+        text-align: center;
+    }
+
 
     .pimage {
         background-image: url("NGC7000.jpg");
@@ -134,17 +147,29 @@
                 </div>
             </div>
 
-            <div id="weather" class="mx-auto text-light text-center">
-                <div id="description"></div>
-                <img src="" id="icon">
-                <div id="temp"></div>
-                <div id="location"></div>
+            <div class="row cols-2 justify-content-center">
+                <div class="col-md-2">
+                    <div id="weather" class="mx-auto text-light text-center">
+                        <div id="description"></div>
+                        <img src="" id="icon">
+                        <div id="temp"></div>
+                        <div id="location"></div>
+                    </div>   
+                </div>
+                <div class="col-md-2">
+                    <div class="aqi mx-auto text-center" style="">
+                        <div>good</div>
+                        <i class="far fa-grin-beam" style=" font-size: 22px; margin-top: 8px; margin-bottom: 12px; color: rgb(red, green, blue);"></i>
+                        <div id="aqi" class="mt-auto"></div>
+                        <div><h5>AQI:</h5></div>
+                    </div>
+                </div>       
             </div>
-            
+
             <button class="btn mx-auto mt-4" onclick="showLegend()" style="color:#8da8b2; font-style: italic; border: 1px solid #000;">Legend</button>
 
             <!--https://www.cleardarksky.com/c/FtWayneINkey.html-->
-            <div class="container mt-2" style="max-width: 50%; overflow-x: scroll; background-color: #000; border-radius: 5px;">
+            <div class="container mt-2" style="max-width: 65%; overflow-x: scroll; background-color: #000; border-radius: 5px;">
                 <div id="cleardarksky" class=" mx-auto" style="">
                     <img src="https://www.cleardarksky.com/c/FtWayneINcsk.gif?c=475244">
                     <img id ="legend" src="skylegend.PNG" style="display: none;">
@@ -226,8 +251,8 @@
         //air pollution call
         
         var key = '2e20ed8413e872de26ceee4534442210';
-        const lat = '41.04565';
-        const long = '-85.30593';
+        const lat = '41';
+        const long = '-85';
 
         fetch('https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=41.04565&lon=-85.30593&appid=' + key)
          .then(response => {
@@ -235,17 +260,35 @@
          })
          .then(data => {
             console.log(data);
-            //drawAP(data1);
+            drawAP(data);
          });
 
         
         
         //output weather
-        /*function drawAP( d ) {
-            var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-            var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
-            var description = d.weather[0].description;
-            console.log(description);
+        function drawAP( d ) {
+            var components = d.list[0].components;
+            var mainaqi = d.list[0].main;
+            console.log(components);
+            //console.log(mainaqi.aqi);
+            
+            if (mainaqi.aqi = 1) {
+                document.getElementById('aqi').innerHTML = '0 - 50';
+            } else if (main.aqi = 2) {
+                document.getElementById('aqi').innerHTML = '51 - 100';
+            } else if (main.aqi = 3) {
+                document.getElementById('aqi').innerHTML = '101 - 150';
+            } else if (main.aqi = 4) {
+                document.getElementById('aqi').innerHTML = '151 - 200';
+            } else if (main.aqi = 5) {
+                document.getElementById('aqi').innerHTML = '201 - 300';
+            } else if (main.aqi = 6) {
+                document.getElementById('aqi').innerHTML = '301 - 500';
+            }
+        }
+        /*
+            }
+            
             document.getElementById('description').innerHTML = d.weather[0].description;
             document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
             document.getElementById('location').innerHTML = d.name;

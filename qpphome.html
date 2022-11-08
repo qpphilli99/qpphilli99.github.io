@@ -60,6 +60,7 @@
         transition: .8s transform cubic-bezier(.155,1.105,.295,1.12),.8s box-shadow,.8s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
         color: rgb(255, 255, 255);
         text-align: center;
+        height: 100%;
     }
 
 
@@ -105,7 +106,6 @@
 
     #skills {
         display: inline-block; 
-        margin-left: 12%; 
         width: 300px; 
         background-color: white; 
         border-radius: 10px;
@@ -114,31 +114,31 @@
         background: linear-gradient(to right, greenyellow 46%, transparent 0);
         background-size: 200% 100%;
         background-position: right;
-        animation: skillmeter 4s 1s forwards;
+        animation: skillmeter 3s 0.1s forwards;
     }
     .cs2:hover {
         background: linear-gradient(to right, green 24%, yellow 34%, red 44%, transparent 0);
         background-size: 200% 100%;
         background-position: right;
-        animation: skillmeter 4s 1s forwards;
+        animation: skillmeter 3s 0.1s forwards;
     }
     .js2:hover {
         background: linear-gradient(to right, yellow 30%, transparent 0);
         background-size: 200% 100%;
         background-position: right;
-        animation: skillmeter 4s 1s forwards;
+        animation: skillmeter 3s 0.1s forwards;
     }
     .ph2:hover {
         background: linear-gradient(to right, purple 48%, transparent 0);
         background-size: 200% 100%;
         background-position: right;
-        animation: skillmeter 4s 1s forwards;
+        animation: skillmeter 3s 0.1s forwards;
     }
     .gi2:hover {
         background: linear-gradient(to right, blue 40%, transparent 0);
         background-size: 200% 100%;
         background-position: right;
-        animation: skillmeter 4s 1s forwards;
+        animation: skillmeter 3s 0.1s forwards;
     }
     @keyframes skillmeter {
         100% {background-position: left;}
@@ -173,23 +173,23 @@
             <div class="container mt-4 mx-auto" style="margin-bottom: 4%;">
                 <h1 class="display-6" style="color: #ffff;">About Me: <hr></h1>
                 <div class="row"  style="margin: 2%;">
-                    <div class="col-md-6 col-sm-4" style="color: #ffff;">
+                    <div class="col-md-6 col-sm-6" style="color: #ffff;">
                         <div class="mt-2">Favorite color   : <span style="color: green;"><strong>Green</strong></span></div>
                         <div class="mt-2">Favorite food    : <span><strong>Pizza</strong></span></div>
                         <div class="mt-2">Favorite animal  : <span><strong>Penguin</strong></span></div>
                         <div class="mt-2">Favorite place   : <span><strong>Anyplace in nature</strong></span></div>
                         <div class="mt-2">Favorite book    : <span><strong>Garden of Eden - Carl Sagan</strong></span></div>
                         <div class="mt-2">Favorite TV show : <span><strong>The Simpsons</strong></span></div>
-                        <div class="mt-2">Favorite movie   : <span><strong>Dr. Strange</strong></span></div>
+                        <div class="mt-2 mb-4">Favorite movie   : <span><strong>Fantastic Fungi</strong></span></div>
                     </div>
 
-                    <div class="col-md-6 col-sm-4" style="font-family:'Courier New', Courier, monospace;">
-                        <div class="mt-3 mb-2" style="color: rgb(13, 235, 31);"><strong>Coding Skills</strong></div>
+                    <div class="d-grid justify-content-center col-md-6 col-sm-6" style="font-family:'Courier New', Courier, monospace; background-color: midnightblue; border-radius: 25px; align-content: center;">
+                        <div class="mb-2" style="color: rgb(13, 235, 31);"><strong>Coding Skills</strong></div>
                         <span id="skills" class="ht2 float-start">&nbsp;HTML</span>
                         <span id="skills" class="cs2 mt-2">&nbsp;CSS</span>
                         <span id="skills" class="js2 mt-2">&nbsp;JavaScript</span>
                         <span id="skills" class="ph2 mt-2">&nbsp;PHP</span>
-                        <div id="skills" class="gi2 mt-2">&nbsp;Git</div>                        
+                        <div id="skills" class="gi2 mt-2 mb-4">&nbsp;Git</div>                        
                     </div>
                 </div>
                 <hr style="color: #ffff;">

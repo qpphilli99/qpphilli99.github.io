@@ -10,13 +10,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" href="Untitled-1.png" type="image/png">
     <title>QP - Archive</title>
-    <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="archive.png" style="height:150px;" class=""></h1><br>
+    <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="archive.png" style="height:150px;" class=""></h1>
+
+    <style>
+        #strong {
+            color: darkgrey;
+        }
+        #hline {
+            color: darkgray;
+        }
+    </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
-        
-    <body style="background-image: linear-gradient(140deg, rgba(5, 4, 56, 0.986),  rgb(15, 14, 66), rgb(0, 0, 8));">
-    <body style="margin-bottom: 2%;">
-        <ul class="nav nav-tabs">
+
+<body class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(140deg, rgba(5, 4, 56, 0.986),  rgb(15, 14, 66), rgb(0, 0, 8));">
+    
+        <ul class="nav nav-tabs mb-4">
             <li class="nav-item">
                 <a class="nav-link" href="https://qpphilli99.github.io./qpphome.html">Home</a>
             </li>
@@ -29,64 +37,63 @@
             <li class="nav-item">
                 <a class="nav-link"  href="https://qpphilli99.github.io./qppcontact.html">Contact Me</a>
             </li>
-        </ul><br><br><br>
+        </ul>
 
-            <div class="container" style="width: 100%; ">
-                <br><br><br><br>
+        <h5 class="text-center" style="margin-bottom: 7%; margin-top: 4%; color: antiquewhite;">This page is an archive of notable work I have completed over the course of my undergraduate degree.</h5>
+        
+        <!--SPRING 2022-->
+        <div class="container d-grid justify-content-center" style="background-color: brown;">
+            <h5 class="text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2022</h5>       
+        </div>
+
+            <div class="container" style="width: 100%; margin-bottom: 6%;">
                 <div class="card rounded" style="background-color:#000">
                     <div class="card-body "style="margin-left: 1%; ">
-
-                        <!--first row in card-->
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%;">This page is an archive of notable work I have completed over the course of my undergraduate degree.</h5>
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2022</h5>
-                                <hr>
-                        <!--first row in card-->
-                        <div class="row" style="margin-top: 10%;">
+                        
+                        <div class="row" style="margin-top: 5%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i495.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>Babbl at IU</p>
-                                <p><strong>Group Members: </strong>Youngki Hong, Mason Laux, BT Sang</p>
-                                <p><strong>Project Description: </strong>Babble at IU is an all in one web platform where IU students stay connected with IU, 
+                                <p><strong id="strong">Project Title: </strong>Babbl at IU</p>
+                                <p><strong id="strong">Group Members: </strong>Youngki Hong, Mason Laux, BT Sang</p>
+                                <p><strong id="strong">Project Description: </strong>Babble at IU is an all in one web platform where IU students stay connected with IU, 
                                                                         find other individuals with similar interests, and find activities going around the IU Bloomington Campus. 
                                                                         This project was conceptualized, designed and implemented through each members unique skillsets over the course of a year.</p>
-                                <p><strong>Project Link: </strong>Visit our Website: <a href="https://cgi.luddy.indiana.edu/~team07/">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
+                                <p><strong id="strong">Project Link: </strong>Visit our Website: <a href="https://cgi.luddy.indiana.edu/~team07/">Here</a></p>
+                            </div>                                     
+                        </div><hr id="hline">
 
-                        <!--second row in card-->
-                        <div class="row" style="margin-top: 10%;">
+                        
+                        <div class="row" style="margin-top: 5%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i369.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title:</strong> StarScraper</p>
-                                <p><strong>Group Members: None</strong></p>
-                                <p><strong>Project Description: </strong>The website <a href="http://stars.astro.illinois.edu/sow/sowlist.html">[STARS]</a> contains
+                                <p><strong id="strong">Project Title:</strong> StarScraper</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>The website <a href="http://stars.astro.illinois.edu/sow/sowlist.html">[STARS]</a> contains
                                     an extensive archive of 150 stars with information pertaining to name, spectral class, distance(LY), apparent magnitude, absolute magnitude, radial velocity(km/s), velocity(km/s), and temperature(K). 
                                     Utilizing various libraries, I scraped data pertaining to the name, hr class, distance in light years, magnitude, and velocity of the 172 
                                     brightest stars seen with the naked eye. The script first sources the data, then replaces the spectral class characters in order to simplify 
                                     the data for further usage. Next the data is further cleansed and prepared for a multitude of engaging visualizations. This notebook is a great display
                                     of my data scraping and analysis skills with python.</p>
-                                <p><strong>Project Link: </strong><a href="qpphilli_final_report.ipynb">StarScraper</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
+                                <p><strong id="strong">Project Link: </strong><a href="qpphilli_final_report.ipynb">StarScraper</a></p>
+                            </div>                                 
+                        </div><hr id="hline">
 
-                        <!--second row in card-->
-                        <div class="row" style="margin-top: 10%;">
+                        
+                        <div class="row" style="margin-top: 5%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="k303.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong></p>
-                                <p><strong>Group Members: </strong> Aanya Jain, Linda Fu, Vivek Patel, Srishti Sarkar</p>
-                                <p><strong>Project Description: </strong>Springfield Beans aims to eliminate their waste, specifically, 
+                                <p><strong id="strong">Project Title: </strong> Springfield Beans Business Analysis</p>
+                                <p><strong id="strong">Group Members: </strong> Aanya Jain, Linda Fu, Vivek Patel, Srishti Sarkar</p>
+                                <p><strong id="strong">Project Description: </strong>Springfield Beans aims to eliminate their waste, specifically, 
                                     when it comes to their supplies (disposable cups, lids, and straws). This excel file shows the cost analysis of what “eliminating waste” 
                                     truly means for the company. First, we start off with Business outlook, which gives you a breakdown of our total revenue and what products 
                                     are contributing the most to this waste. Next, we have Disposable Items Used: Analysis. This sheet explains different items used as well 
@@ -95,71 +102,66 @@
                                     In terms of the cost analysis, we look at the annual cost of drinkware, costs based on both the locations, as well as cost based on hot or 
                                     cold drink type. These charts will help analyze Springfield's drinkware consumption and costs, so they can move towards more sustainable and 
                                     eco-friendly operations. This project showcases my excel skills, as well as my ability to provide business consultations based off of company data. </p>
-                                <p><strong>Project Link: </strong><a href="SP22_K303_Case.xlsm">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
+                                <p><strong id="strong">Project Link: </strong><a href="SP22_K303_Case.xlsm">Here</a></p>
+                            </div>                               
+                        </div><hr id="hline">
 
-                        <!--second row in card-->
-                        <div class="row" style="margin-top: 10%;">
+                        
+                        <div class="row" style="margin-top: 5%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i399.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong> Tracing Bloomington</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong>Utilizing Adobe Illustrator, I traced images of a few notable IU structures/buildings. 
+                                <p><strong id="strong">Project Title: </strong> Tracing Bloomington</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>Utilizing Adobe Illustrator, I traced images of a few notable IU structures/buildings. 
                                     This project helped further enhance my UX/UI design skills by sharpening my illustrator skillset. Throughout this course I learned how to 
                                     evaluate design, take better photographs, edit and manipulate images, sketch/draw and illustrate digital designs, and finally how to apply those
                                     concepts to my ideas for personal branding. I have included multiple projects below. </p>
-                                <p><strong>Project Link: </strong><br>
+                                <p><strong id="strong">Project Link: </strong><br>
                                     <a href="phillipsquinnproject3.png">Here</a><br>
                                     <a href="phillipsquinn-binarylogo.png">Here</a>
                                 </p>
-                                </div>
-                                                                 
-                        </div><hr>
-                        
+                            </div>                                 
+                        </div>
                     </div>
                 </div>
             </div>  
             
-            <div class="container" style="width: 100%; ">
-                <br><br><br><br>
-                <div class="card rounded" style="background-color: #000">
-                    <div class="card-body "style="margin-left: 1%; ">
 
-                        <!--first row in card-->
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Fall 2021</h5>
-                                <hr>
-                        <!--first row in card-->
+<!--FALL 2021-->
+            <div class="container d-grid justify-content-center" style="background-color: brown;">
+                <h5 class="text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Fall 2021</h5>       
+            </div>
+
+            <div class="container" style="width: 100%; margin-bottom: 6%;">
+                <div class="card rounded" style="background-color: #000">
+                    <div class="card-body "style="margin-left: 1%; ">  
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i495.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong> Individual Technology Profeciency</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong>Throughout the semester, I built a website around five technology profeciency assignments. 
+                                <p><strong id="strong">Project Title: </strong> Individual Technology Profeciency</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>Throughout the semester, I built a website around five technology profeciency assignments. 
                                     Some of the notable features of this website include a calculator, live clock, and user creation/login database. 
                                     I learned how to effectively use github, git, as well as other web designing languages such as HTML/CSS, JavaScript and PHP.</p>
-                                <p><strong>Project Link: </strong><a href="https://cgi.luddy.indiana.edu/~qpphilli/capstone-individual/index.html">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
-
-                        <!--second row in card-->
+                                <p><strong id="strong">Project Link: </strong><a href="https://cgi.luddy.indiana.edu/~qpphilli/capstone-individual/index.html">Here</a></p>
+                            </div>                            
+                        </div><hr id="hline">
+                        
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="s307.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>SuperMarket Database Design & implementation</p>
-                                <p><strong>Group Members: </strong> Adam Warner, Thomas Xiong</p>
-                                <p><strong>Project Description: </strong>Our goal in this project was to create a database for Fresh Thyme that would assist the company 
+                                <p><strong id="strong">Project Title: </strong>SuperMarket Database Design & implementation</p>
+                                <p><strong id="strong">Group Members: </strong> Adam Warner, Thomas Xiong</p>
+                                <p><strong id="strong">Project Description: </strong>Our goal in this project was to create a database for Fresh Thyme that would assist the company 
                                     in their day to day tasks. This database would allow Fresh Thyme to access key information about their 
                                     members, suppliers, products and so much more in a quick and easy manner. In addition, this database 
                                     has a number of constraints that are designed to minimize the instances of database errors. Ideally, any 
@@ -169,51 +171,45 @@
                                     to change the database as they please in order to react to future situations. Towards the end of the project, 
                                     we provide the SQL code that we used to implement the database. This project provided a real world application of my database overhaul skills, 
                                     and provided a space for me to prove my SQL profeciency. </p>
-                                <p><strong>Project Link: </strong><a href="t2final.pdf">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
+                                <p><strong id="strong">Project Link: </strong><a href="t2final.pdf">Here</a></p>
+                            </div>                                
+                        </div><hr id="hline">
 
-                        <!--second row in card-->
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="w300.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong> Venture Analysis Portfolio</p>
-                                <p><strong>Group Members: </strong> Russel Cohen, Dean Sofianopoulos, Samantha Stuart, Meher Valechha</p>
-                                <p><strong>Project Description: </strong>This project conducted a full scale analysis on a sporting goods entrepreneruial venture, as well 
+                                <p><strong id="strong">Project Title: </strong> Venture Analysis Portfolio</p>
+                                <p><strong id="strong">Group Members: </strong> Russel Cohen, Dean Sofianopoulos, Samantha Stuart, Meher Valechha</p>
+                                <p><strong id="strong">Project Description: </strong>This project conducted a full scale analysis on a sporting goods entrepreneruial venture, as well 
                                 the sporting goods industry as a whole to see what works/what dosen't and what trends there are to captilize on. 
                                 The project consists of the venture overview, Industry and Market Access, Venture Strategy and Structure, and the Directions for Growth. </p>
-                                <p><strong>Project Link: </strong><a href="Venture-Analysis.pdf">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
-                        
+                                <p><strong id="strong">Project Link: </strong><a href="Venture-Analysis.pdf">Here</a></p>
+                            </div>                                      
+                        </div>
                     </div>
                 </div>
             </div>    
                        
-             
-            <div class="container" style="width: 100%; ">
-                <br><br><br><br>
-                <div class="card rounded" style="background-color: #000">
-                    <div class="card-body "style="margin-left: 1%; ">
+<!--SPRING 2021-->
+            <div class="container d-grid justify-content-center" style="background-color: brown;">
+                <h5 class="text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2021</h5>       
+            </div>
 
-                        <!--first row in card-->
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2021</h5>
-                                <hr>
-                        <!--first row in card-->
+            <div class="container" style="width: 100%; margin-bottom: 6%;">
+                <div class="card rounded" style="background-color: #000">
+                    <div class="card-body "style="margin-left: 1%; ">  
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i308.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong></p>
-                                <p><strong>Group Members: </strong> Jasmine Hazelbaker, Abigail Pesce</p>
-                                <p><strong>Project Description: </strong> This project focused on the following eight goals: 
+                                <p><strong id="strong">Project Title: </strong></p>
+                                <p><strong id="strong">Group Members: </strong> Jasmine Hazelbaker, Abigail Pesce</p>
+                                <p><strong id="strong">Project Description: </strong> This project focused on the following eight goals: 
                                      - Describe the difference between data and information and explain how data can be represented in ways that facilitate information retrieval.
                                      - Analyze requirements and solicit information to design a Conceptual Schema using an Entity Relationship Diagram (ERD).
                                      - Convert an ERD into a Logical Schema
@@ -224,230 +220,163 @@
                                      - Participate in a Team-Based Learning environment to increase interpersonal and team skills
                                     This was my first full on project dealing with handling, storing, and analying digital information. Unfortunatly our website for this project 
                                     is no longer hosted, so I have attached the ERD, SQL table creation + data inserts, and SQL select statment files."></form></p>
-                                <p><strong>Project Link: </strong><br>
+                                <p><strong id="strong">Project Link: </strong><br>
                                     <a href="team02-build.sql.pdf">SQL Table Creation - Data</a><br>
                                     <a href="team02-select.sql.pdf">SQL Select statments</a><br>
                                     <a href="team02.pdf">ERD</a>
                                 </p>
-                                </div>
+                            </div>
                                                                  
-                        </div><hr>
+                        </div><hr id="hline">
 
-                        <!--second row in card-->
+                        
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i211.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong> PizzaNet</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong>Using Python CGI programming, I created a functional pizza ordering website. This project showcases my 
+                                <p><strong id="strong">Project Title: </strong> PizzaNet</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>Using Python CGI programming, I created a functional pizza ordering website. This project showcases my 
                                 ability to create a website with python.</p>
-                                <p><strong>Project Link: </strong><a href="https://cgi.luddy.indiana.edu/~qpphilli/MP2.html">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
-
-                        <!--second row in card-->
+                                <p><strong id="strong">Project Link: </strong><a href="https://cgi.luddy.indiana.edu/~qpphilli/MP2.html">Here</a></p>
+                            </div>                                    
+                        </div><hr id="hline">
+                        
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i453.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>Technoethical Analysis of WALL-E</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong> Completeing a technoethical analysis on the movie WALL-E helped me evaluate the intended ends and possible 
+                                <p><strong id="strong">Project Title: </strong>Technoethical Analysis of WALL-E</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong> Completeing a technoethical analysis on the movie WALL-E helped me evaluate the intended ends and possible 
                                     side effects of technology in order to descern its overall value. This analytical skills learned through this process are easily applicable 
                                     to present-day technical dilemmas and have fortified my thinking when it comes to making challenging decisions.</p>
-                                <p><strong>Project Link: </strong><a href="annotated-Media Essay.pdf">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
-
-                        <!--second row in card-->
+                                <p><strong id="strong">Project Link: </strong><a href="annotated-Media Essay.pdf">Here</a></p>
+                            </div>                                
+                        </div><hr id="hline">
+                        
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i300.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>HCI/Interaction Design Portfolio</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong>This project took on a mock UX/UI design role. I can now fluently design with Adobe XD and Adobe InDesign.
+                                <p><strong id="strong">Project Title: </strong>HCI/Interaction Design Portfolio</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>This project took on a mock UX/UI design role. I can now fluently design with Adobe XD and Adobe InDesign.
                                 This course taught me the process of designing what works for the users, based off research on how the end users react with the applications. This process
                                 generally encompasses the following: inspection methohds, prototyping, usability testing, and a complete wireframe in XD or Figma. </p>
-                                <p><strong>Project Link: </strong><a href="https://xd.adobe.com/view/157717a9-a5e5-473b-92c3-a6a917fd3c5d-4024/?fullscreen">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
-                        
+                                <p><strong id="strong">Project Link: </strong><a href="https://xd.adobe.com/view/157717a9-a5e5-473b-92c3-a6a917fd3c5d-4024/?fullscreen">Here</a></p>
+                            </div>                                      
+                        </div> 
                     </div>
                 </div>
             </div>  
 
-             
-            <div class="container" style="width: 100%; ">
-                <br><br><br><br>
-                <div class="card rounded" style="background-color: #000">
-                    <div class="card-body "style="margin-left: 1%; ">
+<!--FALL 2020-->
+            <div class="container d-grid justify-content-center" style="background-color: brown;">
+                <h5 class="text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Fall 2020</h5>       
+            </div>
 
-                        <!--first row in card-->
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Fall 2020</h5>
-                                <hr>
-                        <!--first row in card-->
+            <div class="container" style="width: 100%; margin-bottom: 6%;">
+                <div class="card rounded" style="background-color: #000">
+                    <div class="card-body "style="margin-left: 1%; "> 
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i202.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>Project Greenlight</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong> This project portrays my sociotechinal analysis of Project Greenlight. Project Greenlight, or PGL, is a network of outdoor and indoor surveillance cameras, 
+                                <p><strong id="strong">Project Title: </strong id="strong">Project Greenlight</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong> This project portrays my sociotechinal analysis of Project Greenlight. Project Greenlight, or PGL, is a network of outdoor and indoor surveillance cameras, 
                                     arranged across higher crime areas of Detroit. These cameras are distinguished by a constant 
                                     flashing green light. They are also capable of facial recognition, and license plate monitoring. I first introduce the system, 
                                     then analyze the decisions being automated by the system, next I dwelve in the history of the system, the desired outcome/additional 
                                     outcomes, and finally the usefulness of a sociotechinal approach.</p>
-                                <p><strong>Project Link: </strong><a href="projectgreenlight.pdf">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
-                        
+                                <p><strong id="strong">Project Link: </strong><a href="projectgreenlight.pdf">Here</a></p>
+                            </div>                                  
+                        </div>
                     </div>
                 </div>
             </div>  
 
-             
-            <div class="container" style="width: 100%; ">
-                <br><br><br><br>
+<!--SPRING 2020-->
+            <div class="container d-grid justify-content-center" style="background-color: brown;">
+                <h5 class="text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2020</h5>       
+            </div>
+
+            <div class="container" style="width: 100%; margin-bottom: 6%;">
                 <div class="card rounded" style="background-color: #000">
                     <div class="card-body "style="margin-left: 1%; ">
-
-                        <!--first row in card-->
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2020</h5>
-                                <hr>
-                        <!--first row in card-->
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i101.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>Initial Personal Website - My First Website Build</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong>Using HTML/JavaScript/CSS I was able to create my first basic website.</p>
-                                <p><strong>Project Link: </strong><a href="https://pages.iu.edu/~qpphilli/i101/i101project.html">Here</a></p>
-                                </div>
-                                                                 
-                        </div><hr>
-
-                        <!--second row in card-->
-                        <div class="row" style="margin-top: 10%;">
-                            <div class="col-md-4  text-right text-light">
-                                <img src="b366.png" style="height:150px;">
-                                    </div>
-
-                            <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong></p>
-                                <p><strong>Group Members: </strong></p>
-                                <p><strong>Project Description: </strong></p>
-                                <p><strong>Project Link: </strong></p>
-                                </div>
-                                                                 
-                        </div><hr>
-
+                                <p><strong id="strong">Project Title: </strong>Initial Personal Website - My First Website Build</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>Using HTML/JavaScript/CSS I was able to create my first basic website.</p>
+                                <p><strong id="strong">Project Link: </strong><a href="https://pages.iu.edu/~qpphilli/i101/i101project.html">Here</a></p>
+                            </div>                                         
+                        </div>
                     </div>
                 </div>
             </div>  
 
-             
-            <div class="container" style="width: 100%; ">
-                <br><br><br><br>
+<!--FALL 2019-->
+            <div class="container d-grid justify-content-center" style="background-color: brown;">
+                <h5 class="text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Fall 2019</h5>       
+            </div>
+            <div class="container" style="width: 100%; margin-bottom: 6%;">
                 <div class="card rounded" style="background-color: #000">
-                    <div class="card-body "style="margin-left: 1%; ">
-
-                        <!--first row in card-->
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Fall 2019</h5>
-                                <hr>
-                        <!--first row in card-->
-                        <div class="row" style="margin-top: 10%;">
-                            <div class="col-md-4  text-right text-light">
-                                <img src="l201.png" style="height:150px;">
-                                    </div>
-
-                            <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong></p>
-                                <p><strong>Group Members: </strong></p>
-                                <p><strong>Project Description: </strong></p>
-                                <p><strong>Project Link: </strong></p>
-                                </div>
-                                                                 
-                        </div><hr>
-
-                        <!--second row in card-->
+                    <div class="card-body "style="margin-left: 1%; "> 
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="h170.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>How Stress Affects the Mind and Body (Health H170, Fall 2019)</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong>The assignment for this project was to conduct research on how stress can negatively and positively affect the human mind and body. I began by gathering relevant information from multiple online resources. After noting common trends, I selected the most informative article and proceeded to summarize my key findings. After analyzing the information provided in the article I wrapped things up with my opinion on how we can go about preventing stress as a society. This project is a good display of my investigative journalism skills since I swiftly browsed multiple resources, spotted common trends and analyzed them, and concluded with my advice.</p>
-                                <p><strong>Project Link: </strong> For more information about this project, click here:</p>
-                                </div>
-                                                                 
-                        </div><hr>
-
+                                <p><strong id="strong">Project Title: </strong>How Stress Affects the Mind and Body (Health H170, Fall 2019)</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>The assignment for this project was to conduct research on how stress can negatively and positively affect the human mind and body. I began by gathering relevant information from multiple online resources. After noting common trends, I selected the most informative article and proceeded to summarize my key findings. After analyzing the information provided in the article I wrapped things up with my opinion on how we can go about preventing stress as a society. This project is a good display of my investigative journalism skills since I swiftly browsed multiple resources, spotted common trends and analyzed them, and concluded with my advice.</p>
+                                <p><strong id="strong">Project Link: </strong> For more information about this project, click here:</p>
+                            </div>                                  
+                        </div>
                     </div>
                 </div>
             </div>  
 
-             
-            <div class="container" style="width: 100%; ">
-                <br><br><br><br>
-                <div class="card rounded" style="background-color: #000">
-                    <div class="card-body "style="margin-left: 1%; ">
+<!--SPRING 2019-->
+            <div class="container d-grid justify-content-center" style="background-color: brown;">
+                <h5 class="text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2019</h5>       
+            </div>
 
-                        <!--first row in card-->
-                        <h5 class="card-title text-light text-center" style="margin-bottom: 7%; margin-top: 4%; font-size: 50px; font-style: italic;">Spring 2019</h5>
-                                <hr>
-                        <!--first row in card-->
+            <div class="container" style="width: 100%; margin-bottom: 12%;">
+                <div class="card rounded" style="background-color: #000">
+                    <div class="card-body "style="margin-left: 1%;">
                         <div class="row" style="margin-top: 10%;">
                             <div class="col-md-4  text-right text-light">
                                 <img src="i203.png" style="height:150px;">
                                     </div>
 
                             <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong>Unconditional Cash Transfers: The Future of Aid (Global Development INTL-I203, Spring 2019)</p>
-                                <p><strong>Group Members: </strong>None</p>
-                                <p><strong>Project Description: </strong>The goal of this essay was to present my opinion on the most effecient method to provide economic aid to underdeveloped countries. I started by listing off the various global aid programs we had learned about over the course of the semester, and factually proved why each program was inefficient. Next, I stated why my chosen program was the most economically efficient method to go about things by providing precedent of successful implementations in various countries. This paper is a great display of my global awareness and ability to simplify and analyze extremely complex international issues. </p>
-                                <p><strong>Project Link: </strong>For more information about this project, click here:</p>
-                                </div>
-                                                                 
-                        </div><hr>
-
-                        <!--second row in card-->
-                        <div class="row" style="margin-top: 10%;">
-                            <div class="col-md-4  text-right text-light">
-                                <img src="h263.png" style="height:150px;">
-                                    </div>
-
-                            <div class="col-md-8  text-light">
-                                <p><strong>Project Title: </strong></p>
-                                <p><strong>Group Members: </strong></p>
-                                <p><strong>Project Description: </strong></p>
-                                <p><strong>Project Link: </strong></p>
-                                </div>
-                                                                 
-                        </div><hr>
-
+                                <p><strong id="strong">Project Title: </strong>Unconditional Cash Transfers: The Future of Aid (Global Development INTL-I203, Spring 2019)</p>
+                                <p><strong id="strong">Group Members: </strong>None</p>
+                                <p><strong id="strong">Project Description: </strong>The goal of this essay was to present my opinion on the most effecient method to provide economic aid to underdeveloped countries. I started by listing off the various global aid programs we had learned about over the course of the semester, and factually proved why each program was inefficient. Next, I stated why my chosen program was the most economically efficient method to go about things by providing precedent of successful implementations in various countries. This paper is a great display of my global awareness and ability to simplify and analyze extremely complex international issues. </p>
+                                <p><strong id="strong">Project Link: </strong>For more information about this project, click here:</p>
+                            </div>                                    
+                        </div>
                     </div>
                 </div>
             </div>  
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!--FOOTER-->
             <div class="mt-auto" id="footer" style="--bs-gutter-x:0; /*position: fixed; bottom: 0; left: 0; width: 100%; opacity: 70%;*/">
                 <div class="col">
                     <div class="footer">
@@ -458,6 +387,5 @@
                     </div>
                 </div>
             </div>
- 
 </body>
 </html>

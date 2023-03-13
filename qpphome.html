@@ -104,17 +104,25 @@
         height: 100%;
     }
 
-    #skills {
+    .skills {
         display: inline-block; 
         width: 300px; 
         background-color: white; 
         border-radius: 10px;
     }
-    .ht2:hover {
+    .ht2 {
+        background-color: white;
+        background-size: 200% 100%;
+        background-position: right;
+        animation: skillmeter 3s 0.1s forwards;
+        animation-iteration-count: 1;
+    }
+    .ht22 {
         background: linear-gradient(to right, greenyellow 46%, transparent 0);
         background-size: 200% 100%;
         background-position: right;
         animation: skillmeter 3s 0.1s forwards;
+        animation-iteration-count: 1;
     }
     .cs2:hover {
         background: linear-gradient(to right, green 24%, yellow 34%, red 44%, transparent 0);
@@ -185,11 +193,11 @@
 
                     <div class="d-grid justify-content-center col-md-6 col-sm-6" style="font-family:'Courier New', Courier, monospace; background-color: midnightblue; border-radius: 25px; align-content: center;">
                         <div class="mb-2" style="color: rgb(13, 235, 31);"><strong>Coding Skills</strong></div>
-                        <span id="skills" class="ht2 float-start">&nbsp;HTML</span>
-                        <span id="skills" class="cs2 mt-2">&nbsp;CSS</span>
-                        <span id="skills" class="js2 mt-2">&nbsp;JavaScript</span>
-                        <span id="skills" class="ph2 mt-2">&nbsp;PHP</span>
-                        <div id="skills" class="gi2 mt-2 mb-4">&nbsp;Git</div>                        
+                        <span id="1" class="skills ht2 float-start">&nbsp;HTML</span>
+                        <span id="2" class="skills cs2 mt-2">&nbsp;CSS</span>
+                        <span id="3" class="skills js2 mt-2">&nbsp;JavaScript</span>
+                        <span id="4" class="skills ph2 mt-2">&nbsp;PHP</span>
+                        <div id="5" class="skills gi2 mt-2 mb-4">&nbsp;Git</div>                        
                     </div>
                 </div>
                 <hr style="color: #ffff;">
@@ -297,7 +305,6 @@
         }
 
         //air pollution call
-        
         var key = '2e20ed8413e872de26ceee4534442210';
         const lat = '41';
         const long = '-85';
@@ -309,14 +316,17 @@
          .then(data => {
             console.log(data);
             drawAP(data);
+         })
+         .catch(function(err) {
+                //catch errors
+                console.log(err);
          });
 
         
-        
         //output weather
         function drawAP( d ) {
-            var components = d.list[0].components;
-            var mainaqi = d.list[0].main;
+            var components = d.list[2].components;
+            var mainaqi = d.list[2].main;
             console.log(components);
             //console.log(mainaqi.aqi);
             
@@ -346,17 +356,15 @@
             }
         }
 
-        //nasa apod api
-        var nasakey = 'Jyaf4VejwvJey1lbwomVcx3GVSaFAR808YanbgDL';
+        //dailyquotes api 
+        const api_url = "https://zenquotes.io/api/today";
 
-        fetch('https://api.nasa.gov/planetary/apod?api_key=Jyaf4VejwvJey1lbwomVcx3GVSaFAR808YanbgDL')
-         .then(response => {
-            return response.json() 
-         })
-         .then(data => {
+        async function getapi(url) {
+            const response = await fetch(url);
+            var data = await response.json();
             console.log(data);
-            //drawAP(data);
-         });
+        }
+        getapi(api_url);
 
         //parallax
         let last_known_scroll_position = 0;
@@ -368,6 +376,13 @@
                 document.getElementById('y').style.transform = 'translateY(-' + (scroll_pos * .06) + '%)';
             }
         }
+
+        $(document).ready(function() {
+            $("#1").mouseover( function() {
+                $("#1").toggleClass("skills ht22 float-start");
+            });
+        });
+        
 
         window.addEventListener('scroll', function(e) {
             last_known_scroll_position = window.scrollY;

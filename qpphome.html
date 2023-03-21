@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BCTS1EYW5"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-3BCTS1EYW5');</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
-    
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
@@ -13,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/dc9b3cdfa0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>QP - Home</title>
     <h1 class="text-light text-center" style="margin-top: 3.5%; margin-bottom: 1%;"><img src="home1.png" style="height:150px;" class=""></h1><br>
 </head>
@@ -117,8 +119,8 @@
         animation: skillmeter 3s 0.1s forwards;
         animation-iteration-count: 1;
     }
-    .ht22 {
-        background: linear-gradient(to right, greenyellow 46%, transparent 0);
+    .ht2:hover {
+        background: linear-gradient(to right, greenyellow 48%, transparent 0);
         background-size: 200% 100%;
         background-position: right;
         animation: skillmeter 3s 0.1s forwards;
@@ -375,11 +377,7 @@
             }
         }
 
-        $(document).ready(function() {
-            $("#1").mouseover( function() {
-                $("#1").toggleClass("skills ht22 float-start");
-            });
-        });
+        
         
 
         window.addEventListener('scroll', function(e) {
